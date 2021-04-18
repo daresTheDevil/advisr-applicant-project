@@ -1,5 +1,4 @@
 # Advisr Applicant Project
-<!-- QUICKSTART -->
 ## Quickstart
 
 If you already have [Docker](https://docker.io) and [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git):
@@ -14,7 +13,6 @@ docker-compose up
 
 Open your browser to http://localhost:3000.
 
-<!-- ABOUT THE PROJECT -->
 ## About The Project
 
 This is a basic response to the Advisr sample project.
@@ -41,7 +39,7 @@ This section should list any major frameworks that you built your project using.
 
 Make sure you have [NodeJS](https://nodejs.org) installed and open your terminal to the project root.
 
-Start API in `/server` directory:
+> Start API in `/server` directory:
 
 ```bash
 # install dependencies
@@ -50,13 +48,15 @@ npm install
 npm start
 ```
 
-Start Vue in `/client` directory:
+> Start Vue in `/client` directory:
 ```bash
 # install dependencies
 npm install
 # in 'cilent' directory, start vue client with
 npm run dev
 ```
+
+Open your browser to http://localhost:3000.
 
 To view API documentation in `/docs` directory:
 ```bash

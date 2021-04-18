@@ -1,18 +1,12 @@
 version: '3.7'
 services:
   server:
-    image: einheit80/advisr-server
+    image: einheit80/advisr-server:latest
     ports:
       - "3001:3001"
     container_name: advisr-server
-    volumes:
-       - ./server:/app/
-       - /server/node_modules
   client:
-    image: einheit80/advisr-client
+    image: einheit80/advisr-client:latest
     ports:
-      - "8080:8080"
+      - "3000:3000"
     container_name: advisr-client
-    volumes:
-       - ./client:/app
-       - /app/node_modules
