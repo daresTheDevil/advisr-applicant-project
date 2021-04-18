@@ -14,6 +14,4 @@ RUN npm install -g esbuild --unsafe-perm=true
 
 RUN npm run build
 
-EXPOSE 3000
-
 CMD [ "http-server", "dist" ]

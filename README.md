@@ -11,7 +11,7 @@ cd advisr-applicant-project
 docker-compose up
 ```
 
-Open your browser to http://localhost:3000.
+Open your browser to http://localhost:8080.
 
 ## About The Project
 
