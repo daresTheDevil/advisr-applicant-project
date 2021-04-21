@@ -69,7 +69,7 @@ npm start
 ```bash
 # install dependencies
 npm install
-# in 'cilent' directory, start vue client with
+# in 'client' directory, start vue client with
 npm run dev
 ```
 
