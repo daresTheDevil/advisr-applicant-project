@@ -6,7 +6,7 @@ If you already have [Docker](https://docker.io) and [Git](https://git-scm.com/bo
 # clone the project
 git clone https://github.com/davidbkay/advisr-applicant-project.git
 # change to project directory
-cd advisr-applicant-project/infrastructure
+cd advisr-applicant-project
 # start the project in docker
 docker-compose up
 ```
