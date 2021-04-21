@@ -1,0 +1,27 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: advisr-client
+  namespace: default
+  labels:
+    k8s-app: advisr-client
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      k8s-app: advisr-client
+  template:
+    metadata:
+      name: advisr-client
+      labels:
+        k8s-app: advisr-client
+    spec:
+      containers:
+        - name: advisr-client
+          image: 'einheit80/advisr-client:latest'
+          imagePullPolicy: Always
+          securityContext:
+            privileged: false
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst

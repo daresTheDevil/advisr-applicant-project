@@ -6,7 +6,7 @@ If you already have [Docker](https://docker.io) and [Git](https://git-scm.com/bo
 # clone the project
 git clone https://github.com/davidbkay/advisr-applicant-project.git
 # change to project directory
-cd advisr-applicant-project
+cd advisr-applicant-project/infrastructure
 # start the project in docker
 docker-compose up
 ```
@@ -34,6 +34,23 @@ This section should list any major frameworks that you built your project using.
 * [TailwindCSS](https://tailwindcss.com)
 * [LeafletJS](https://leafletjs.com/)
 * [Docker](https:/docker.io/)
+
+## Deploy to local k8s cluster
+
+> install Minikube with by following instructions at https://minikube.sigs.k8s.io/docs/start/
+
+```bash
+# start minikube cluster
+minikube start
+# open your dashboard
+minikube dashboard
+# in another terminal window, create services and deployments by using all files in ./k8s directory
+kubectl apply -f ./k8s
+# expose load balancer
+minikube tunnel
+```
+
+> open your browser to http://localhost:8080 to view the app
 
 ## Run in terminal
 

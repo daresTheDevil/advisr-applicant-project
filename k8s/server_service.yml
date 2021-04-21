@@ -1,0 +1,17 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: advisr-server
+  namespace: default
+  labels:
+    k8s-app: advisr-server
+spec:
+  ports:
+    - protocol: TCP
+      port: 3001
+      targetPort: 3001
+      # nodePort: 31946
+  selector:
+    k8s-app: advisr-server
+  type: LoadBalancer
+  externalTrafficPolicy: Cluster

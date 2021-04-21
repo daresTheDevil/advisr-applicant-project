@@ -1,0 +1,17 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: advisr-client
+  namespace: default
+  labels:
+    k8s-app: advisr-client
+spec:
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+      # nodePort: 30786
+  selector:
+    k8s-app: advisr-client
+  type: LoadBalancer
+  externalTrafficPolicy: Cluster
