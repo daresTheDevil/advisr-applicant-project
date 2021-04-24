@@ -1,5 +1,18 @@
 # Advisr Applicant Project
-## Quickstart
+
+![Alt Text](advisr-demo.gif)
+
+## About The Project
+
+VueJS client connect to Node/Express API. User can autocomplete search for businesses, sort by columns, and click business name to view details.
+
+### Project Scope
+
+This project uses a Node/Express API to return data from a json file. A Vue client consumes these API endpoints to show data to the user. Search/filter is provided for loaded businesses as well as column level sorting indicated by an icon.
+
+Selecting a business will load business details including a LeafletJS map with the business location indicated with a marker.
+
+### Quickstart
 
 If you already have [Docker](https://docker.io) and [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git):
 ```bash
@@ -13,19 +26,7 @@ docker-compose up
 
 Open your browser to http://localhost:8080.
 
-## About The Project
-
-This is a basic response to the Advisr sample project.
-
-### Project Scope
-
-This project uses a Node/Express API to return data from a json file. A Vue client consumes these API endpoints to show data to the user. Search/filter is provided for loaded businesses as well as column level sorting indicated by an icon.
-
-Selecting a business will load business details including a LeafletJS map with the business location indicated with a marker.
-
 ### Built With
-
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
 * [VueJS](https://vuejs.org)
 * [ViteJS](https://vitejs.dev)
@@ -82,3 +83,21 @@ npm install
 # view docs
 npx serve
 ```
+
+## API Reference
+
+#### Get all businesses
+
+```http
+  GET /businesses
+```
+
+#### Get single business
+
+```http
+  GET /business/:id
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of business to fetch |

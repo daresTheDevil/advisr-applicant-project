@@ -8,5 +8,5 @@ services:
   client:
     image: einheit80/advisr-client:latest
     ports:
-      - "3000:3000"
+      - "8080:8080"
     container_name: advisr-client
